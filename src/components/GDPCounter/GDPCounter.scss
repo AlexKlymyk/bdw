@@ -1,0 +1,117 @@
+.gdp-counter {
+  z-index: 5;
+  max-width: fit-content;
+  border-radius: 16px;
+  border: 1px solid #c23e34;
+  background: linear-gradient(to right, #b72c22, #982219);
+  box-shadow: 0px 5px 14px 2px rgba(0, 0, 0, 1), inset 0px 7px 6px rgba(0, 0, 0, 0.29);
+  overflow: hidden;
+  padding: 10px;
+  margin: 0 auto 24px;
+  position: relative;
+
+  @media (max-width: 600px) {
+    padding: 8px;
+  }
+
+  &__label {
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 2.2;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+    margin-bottom: 7px;
+    text-align: center;
+
+    .loss {
+      color: #ff4343;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+  }
+
+  &__digits-wrap {
+    background: black;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 3px 5px;
+  }
+
+  &__digit-group-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__digit-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #d2d2d2;
+  }
+
+  &__digit-tile {
+    font-family: 'Rethink Sans', sans-serif;
+    position: relative;
+    width: 36px;
+    height: 42px;
+    border-left: 0.42px solid white;
+    border-right: 0.42px solid white;
+    border-image: linear-gradient(to bottom, black, rgb(48,48,48), white, rgb(48,48,48), black) 1;
+    border-radius: 10%;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    color: #d2d2d2;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(22,22,22), rgb(0,0,0), rgb(44,44,44), rgb(99,99,99) 50%, rgb(44,44,44), rgb(0,0,0), rgb(22,22,22));
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 600px) {
+      width: 26px;
+      height: 35px;
+    }
+
+    @media (max-width: 374px) {
+      width: 21px;
+      height: 32px;
+    }
+  }
+
+  &__screw {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 10px;
+    mix-blend-mode: overlay;
+  }
+
+  &__screw--left {
+    left: 10px;
+  }
+
+  &__screw--right {
+    right: 10px;
+  }
+}
