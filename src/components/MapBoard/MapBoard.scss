@@ -12,6 +12,7 @@
     min-height: 740px;
     max-height: 740px;
     z-index: 4;
+    filter: drop-shadow(0 24px 104px rgba(0, 0, 0, 0.85));
 
     @media (max-width: 1200px) {
       max-width: 1000px;
@@ -46,6 +47,7 @@
       min-width: 360px;
       min-height: 680px;
       max-height: 680px;
+      filter: none;
     }
 
     @media (max-width: 374px) {
@@ -89,6 +91,7 @@
     z-index: 5;
     position: absolute;
     pointer-events: none;
+    filter: drop-shadow(0 24px 104px rgba(0, 0, 0, 0.85));
 
     @media (max-width: 600px) {
       background: image-set(url('../../assets/border-frame-mobile.avif') 1x, url('../../assets/border-frame-mobile-2x.avif') 2x) no-repeat center center / 100% 100%;

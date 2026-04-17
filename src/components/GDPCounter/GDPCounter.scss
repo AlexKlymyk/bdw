@@ -1,10 +1,11 @@
 .gdp-counter {
-  z-index: 5;
+  z-index: 6;
   max-width: fit-content;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid #c23e34;
-  background: linear-gradient(to right, #b72c22, #982219);
-  box-shadow: 0px 5px 14px 2px rgba(0, 0, 0, 1), inset 0px 7px 6px rgba(0, 0, 0, 0.29);
+  // background: linear-gradient(to right, #b72c22, #982219);
+  background: url('../../assets/gdp-counter-bg.svg') no-repeat center center / cover;
+  box-shadow: 0px 5px 14px 2px rgba(0, 0, 0, 1);
   overflow: hidden;
   padding: 10px;
   margin: 0 auto 24px;

@@ -7,6 +7,7 @@
   justify-content: center;
   z-index: 1000;
   animation: overlay-in 0.2s forwards;
+  z-index: 999;
 
   @media (max-width: 600px) or (max-height: 800px) {
     align-items: flex-start;

@@ -7,7 +7,6 @@ import flag from '../../assets/flag.avif'
 import flag2x from '../../assets/flag-2x.avif'
 import { supabaseClient } from '../../lib/supabase'
 import { createStickerIcon, createPinIcon, type StickerData } from '../../lib/stickerIcon'
-import StickerModal from '../StickerModal/StickerModal'
 
 function ThreadPane() {
   const map = useMap()
@@ -31,10 +30,9 @@ type ThreadData = {
   to_sticker_id: string
 }
 
-function MapBoard() {
+function MapBoard({ setActiveSticker }: { setActiveSticker: (sticker: StickerData) => void }) {
   const [stickers, setStickers] = useState<StickerData[]>([])
   const [threads, setThreads] = useState<ThreadData[]>([])
-  const [activeSticker, setActiveSticker] = useState<StickerData | null>(null)
   const isMobile = useMediaQuery('(max-width: 600px)')
   const zoom = isMobile ? 6 : 7
 
@@ -107,13 +105,6 @@ function MapBoard() {
           </MapContainer>
         </div>
       </div>
-
-      {activeSticker && (
-        <StickerModal
-          sticker={activeSticker}
-          onClose={() => setActiveSticker(null)}
-        />
-      )}
     </div>
   )
 }
